@@ -37,14 +37,14 @@
 		
 		$pass_validado=true;
 		echo $pass;
-		die();
+		//die();
 	}
 	else{
 		$pass_validado=false;
 		$errores['pass']="Campo requerido";
 		echo var_dump($errores);
 		echo var_dump($pass);
-		die();
+		///die();
 		
 	}
 	//insercion

@@ -1,12 +1,34 @@
-<?php require_once('helpers.php');?>
 <aside id="sidebar">
+	<?php
+		if(isset($_SESSION['usuario'])):
+	?>
+	<div id="usuario_logueado" class="block_aside">	
+		<h3>
+			Bienvenido, 
+			<?=$_SESSION['usuario']['nombre'].' '.$_SESSION['usuario']['apellidos'];?>
+			<!--botones-->
+			<a href="logout/logout.php" class="boton boton-verde">Entradas</a>
+			<a href="logout/logout.php" class="boton boton-rojo">Crear categorias</a>
+			<a href="logout/logout.php" class="boton boton-naranja">Mis datos</a>
+			<a href="logout/logout.php" class="boton boton-azul">Logout</a>
+		</h3>
+	</div>
+	<?php
+		endif;
+	?>
 	<div id="login" class="block_aside">
 		<h3>Inicia sesión</h3>
-		<form action="login.php" method="POST">
+		<?php
+		if(isset($_SESSION['error_login'])):?>
+		<div class="alerta alerta-error">
+			<?=$_SESSION['error_login'];?>
+		</div>
+		<?php endif; ?>
+		<form action="ingreso/login.php" method="POST">
 			<label for="email">Email</label>
 			<input type="email" name="email" />
 			<label for="password">Contraseña</label>
-			<input type="password" name="pass" />
+			<input type="password" name="password" />
 			<input type="submit" value="Entrar">
 		</form>
 	</div>
@@ -17,7 +39,7 @@
 		<div class='Alerta exito'>
 			<?=$_SESSION['completado']?>
 		</div>
-		<?php else: ?>
+		<?php elseif(isset( $_SESSION['errores'])): ?>
 		<div class='Alerta exito'>
 			<?=$_SESSION['errores']['general']?>
 		</div>
@@ -39,4 +61,4 @@
 		</form>
 	</div>
 	
-</aside>			
+</aside>													

@@ -143,7 +143,8 @@ input[type='password'] {
 }
 
 input[type='button'],
-input[type='submit'] {
+input[type='submit'],
+.boton {
     margin-top: 5px;
     margin-bottom: 5px;
     display: block;
@@ -243,4 +244,44 @@ input[type='submit'] {
 
 .alerta-error {
     background-color: red;
+}
+
+.boton {
+    width: 120px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.boton-verde {
+    background: #1fc31f;
+    border-color: #1fc31f;
+}
+
+.boton-naranja {
+    background: orange;
+    border-color: orange;
+}
+
+.boton-rojo {
+    background: #ff3737;
+    border-color: #ff3737;
+}
+
+.boton-verde:hover {
+    background-color: green;
+    border-color: green;
+}
+
+.boton-naranja:hover {
+    background: orangered;
+    border-color: orangered;
+}
+
+.boton-rojo:hover {
+    background-color: red;
+    border-color: red;
+}
+
+.boton-azul:hover {
+    background-color: #044981;
 }

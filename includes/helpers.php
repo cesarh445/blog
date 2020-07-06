@@ -18,4 +18,18 @@
 		}
 		return $borrado;
 	}
+	function obtenerCategorias($conexion){
+		$sql="SELECT * FROM categorias ORDER BY id ASC";
+		$result=mysqli_query($conexion,$sql);
+		$categorias=array();
+		if($result && mysqli_num_rows($result)>=1){
+			$categorias=$result;	
+		}
+		return $categorias;
+	}
+	
+	function conseguirUltimasEntradads($conexion){
+			$sql="SELECT e.*,c.* FROM entradas";
+		
+	}
 ?>
