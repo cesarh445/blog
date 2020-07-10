@@ -285,3 +285,12 @@ input[type='submit'],
 .boton-azul:hover {
     background-color: #044981;
 }
+
+
+/* estilos de span*/
+
+.fecha {
+    color: #4e4e4e;
+    margin-top: 15px;
+    font-size: 14px;
+}

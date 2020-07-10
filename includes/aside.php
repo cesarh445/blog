@@ -8,13 +8,16 @@
 			<?=$_SESSION['usuario']['nombre'].' '.$_SESSION['usuario']['apellidos'];?>
 			<!--botones-->
 			<a href="logout/logout.php" class="boton boton-verde">Entradas</a>
-			<a href="logout/logout.php" class="boton boton-rojo">Crear categorias</a>
+			<a href="crearcategoria.php" class="boton boton-rojo">Crear categorias</a>
 			<a href="logout/logout.php" class="boton boton-naranja">Mis datos</a>
 			<a href="logout/logout.php" class="boton boton-azul">Logout</a>
 		</h3>
 	</div>
 	<?php
 		endif;
+	?>
+	<?php
+		if(!isset($_SESSION['usuario'])):
 	?>
 	<div id="login" class="block_aside">
 		<h3>Inicia sesión</h3>
@@ -60,5 +63,5 @@
 			<input type="submit" value="Registar" name="submit">
 		</form>
 	</div>
-	
+	<?php endif;?>
 </aside>													
