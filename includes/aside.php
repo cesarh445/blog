@@ -7,7 +7,7 @@
 			Bienvenido, 
 			<?=$_SESSION['usuario']['nombre'].' '.$_SESSION['usuario']['apellidos'];?>
 			<!--botones-->
-			<a href="logout/logout.php" class="boton boton-verde">Entradas</a>
+			<a href="crearentradas.php" class="boton boton-verde">Entradas</a>
 			<a href="crearcategoria.php" class="boton boton-rojo">Crear categorias</a>
 			<a href="logout/logout.php" class="boton boton-naranja">Mis datos</a>
 			<a href="logout/logout.php" class="boton boton-azul">Logout</a>
