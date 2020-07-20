@@ -35,10 +35,12 @@
 		)
 		";
 		$guardar=mysqli_query($db,$sql);
+		header('location:..');
 	}
 	else{
 		$_SESSION['errores_entrada']=$errores;
+		header('location:../crearentradas.php');
 	}
-	header('location:../crearentradas.php');
+	
 	
 ?>			
