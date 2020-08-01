@@ -9,7 +9,7 @@
 			<!--botones-->
 			<a href="crearentradas.php" class="boton boton-verde">Entradas</a>
 			<a href="crearcategoria.php" class="boton boton-rojo">Crear categorias</a>
-			<a href="logout/logout.php" class="boton boton-naranja">Mis datos</a>
+			<a href="mis_datos.php" class="boton boton-naranja">Mis datos</a>
 			<a href="logout/logout.php" class="boton boton-azul">Logout</a>
 		</h3>
 	</div>
@@ -62,6 +62,7 @@
 			<?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'],'pass') : '';?>
 			<input type="submit" value="Registar" name="submit">
 		</form>
+		
 	</div>
 	<?php endif;?>
-</aside>													
+</aside>																	
